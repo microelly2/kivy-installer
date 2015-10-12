@@ -1,0 +1,3 @@
+title=installer 00000000000000000000000000000000000
+author=fred feuerstein
+orientation=landscape
