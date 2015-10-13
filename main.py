@@ -32,18 +32,24 @@ gui = '''
 	BoxLayout:
 		orientation: "vertical"
 		Label:
-			text: "Kite App Installer v  0.2"
+			text: "Kite App Installer v  0.3"
 		Button:
 			text:"Install ressource manager App"
-			#on_release: app.readZip(self)
 			on_press: app.process_button_click('https://github.com/microelly2/kivy-ressourcen/archive/master.zip')
 		Button:
 			text:"Install scheduler App"
 			on_press: app.process_button_click('https://github.com/microelly2/kivy-stundenplan/archive/master.zip')
-			#on_release: app.readZip(self)
 		Button:
-			text:"Installation Info"
+			text:"Update the Installer"
+			on_press: app.process_button_click('https://github.com/microelly2/kivy-installer/archive/master.zip')
+		Button:
+			text:"Purge Logs"
+			on_release: self.text="clear cache, logs and temp data -- not impl. yet"
+
+		Button:
+			text:"Installation Status Info"
 			on_release: self.text="Huhu, da kommt noch was"
+		
 
 <PopupBox>:
 	pop_up_text: _pop_up_text
